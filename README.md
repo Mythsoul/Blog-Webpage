@@ -1,5 +1,5 @@
 # Blog Application
-This is a simple blog application built with Node.js, Express.js, and Axios, allowing users to create, read, update, and delete blog posts.
+This is a simple blog application built with Node.js, Express.js, and Axios, postgres(for database) allowing users to create, read, update, and delete blog posts.
 
 # Features
 View all existing blog posts.
@@ -16,6 +16,8 @@ Express.js
 Axios
 
 Ejs/CSS (for front-end templates)
+
+postgres(For database)
 
 # Installation
 
@@ -35,7 +37,21 @@ cd Blog-Webpage
 ```bash
 npm install
 ```
+4 . setup database server : 
 
+a . Open up your postgres create a database open queries tool and enter the query code in the queries.sql file. 
+
+b . After that setup your database here : 
+```bash
+const db = new pg.Client({
+  user: "ur user",
+  host: "Your host (ex: localhost)", 
+  database: "database name u just created", 
+  password: "database password", 
+  port: port number
+});
+
+```
 4 . Start the Api & Backend  server:
 
 ```bash
