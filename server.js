@@ -29,6 +29,7 @@ app.get("/", async (req, res) => {
 // Route to render the new post page
 app.get("/new", (req, res) => {
   res.render("modify", { heading: "New Post", submit: "Create Post", post: {} });
+  
 });
 
 // Route to render the edit post page
