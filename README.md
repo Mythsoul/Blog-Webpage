@@ -39,17 +39,16 @@ npm install
 ```
 4 . setup database server : 
 
-a . Open up your postgres create a database open queries tool and enter the query code in the queries.sql file. 
+a . Open up your postgres create a database from open queries tool and enter the query code in the queries.sql file. 
 
-b . After that setup your database here : 
+b . create a .env file and fill the required area: 
 ```bash
-const db = new pg.Client({
-  user: "ur user",
-  host: "Your host (ex: localhost)", 
-  database: "database name u just created", 
-  password: "database password", 
-  port: port number
-});
+pg_user=youruser
+pg_host=host
+pg_database=databasename
+pg_password=password
+pg_port=port (deafult : 5432)
+
 
 ```
 4 . Start the Api & Backend  server:
